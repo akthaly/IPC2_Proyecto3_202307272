@@ -1,0 +1,46 @@
+
+# Entorno virtual de Python
+venv/
+env/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs y archivos temporales
+*.log
+*.sqlite3
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Archivos de configuración del entorno
+*.env
+*.env.*
+
+# Archivos creados por editores de texto y entornos de desarrollo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Archivos de caché
+*.cache
+*.bak
+*.swp
+*.temp
+*.tmp
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/
+
+# Archivos del sistema operativo
+Thumbs.db

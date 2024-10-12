@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- CSS Preline -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Styles.css' %}">
+
+</head>
+<body>
+        <nav class="nav ">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <a class="tituloNavBar text-3xl">Tecnologías Chapinas, S.A.</a>
+                </div>
+              </div>
+                <div class="hidden md:block">
+                  <div class="ml-10 flex items-baseline space-x-4 justify-end">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="/" class="fredoka fontColorBlack text-xl">Archivo</a>
+                    <a href="/reporte" class="fredoka fontColorBlack text-xl">Reportes</a>
+                    <a href="/ayuda" class="fredoka fontColorBlack text-xl">Ayuda</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+
+  {% block contenido %} {% endblock %}
+
+
+</body>
+
+</html>

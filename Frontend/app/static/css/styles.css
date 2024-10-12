@@ -1,0 +1,104 @@
+body {
+    background-color: #EAD8B1;
+  }
+
+    
+nav {
+  background-color: #EAD8B1;
+   }
+
+  .tituloNavBar{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .fontColorBeige {
+    color: #EAD8B1;
+  }
+  .fontColorBlack {
+    color: #323232;
+  }
+
+  .botones {
+    background-color: #603F26;
+    border: 0.5px solid #FFDBB5;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  }
+  .botones:hover {
+  background-color: #7D5A43; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  }
+  
+  .botonBeige {
+    background-color: #EAD8B1; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno, más ancho para mejor apariencia */
+    margin: 10px; /* Margen externo */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  }
+
+  /* Efecto al pasar el mouse */
+  .botonBeige:hover {
+    background-color: #D5C6B2; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  }
+
+  .fredokaBold {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .fredokaSemiBold {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .fredoka {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .open {
+    background-color: #674636;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  .cardInfo {
+    background-color: #6C4E31;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  .justificado {
+    text-align: justify;
+    margin-left: 10%;
+    line-height: 1.6; 
+    margin-right: 10%;
+
+
+  }
+  
+
+  
