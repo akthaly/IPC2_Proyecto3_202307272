@@ -10,47 +10,30 @@
   <title>Ayuda</title>
 </head>
 
-<body>
+<body class="gatoInformacion">
   <!-- Extensión de la Navbar -->
   {% extends 'NavBar.html' %}
 
   {% block contenido %}
-  
-  <div class="body">
-    <section class="justificado py-10">
-      <h1 class="fredokaSemiBold fontColorBlack sm:text-4xl">Información:</h1>
-      <a class="fredoka fontColorBlack sm:text-2xl"> Sistema de gestión de máquinas y productos que usa Flask y Python como marco de trabajo para la interfaz web. Para cargar información sobre máquinas y productos, el sistema puede procesar archivos XML y ejecutar instrucciones de ensamblaje mediante listas enlazadas y ejecución paralela de hilos. El uso de listas enlazadas personalizadas para el almacenamiento de datos y la gestión de un ensamblaje concurrente son componentes importantes de esta implementación, lo que lo convierte en un sistema efectivo para la gestión de procesos industriales automatizados. Este documento describe los componentes principales del código y las decisiones de diseño que permitieron optimizar el rendimiento del sistema.
-
-      </a>
-    </section>
-    <section class="mx-auto max-w-2xl py-10 sm:py-10 lg:py-10 grid grid-cols-2 gap-4 cards-container">
-      <div class="cardInfo text-center">
-        <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información Personal</h1>
-        <!-- <p class="fredoka text-white py-5">Desarrollado por: Bryan Alejandro Anona Paredes.</p>
+  <section class="mx-auto max-w-2xl py-10 sm:py-10 lg:py-10 grid grid-cols-2 gap-4 cards-container">
+    <div class="cardInfo text-center">
+      <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información Personal</h1>
+      <!-- <p class="fredoka text-white py-5">Desarrollado por: Bryan Alejandro Anona Paredes.</p>
         <p class="fredoka text-white">Carnet: 202307272</p> -->
-        <div class="flex items-center justify-center gap-x-6">
-          <a href="https://github.com/akthaly" class="text-white fredokaSemiBold botones">Información</a>
-        </div>
+      <div class="flex items-center justify-center gap-x-6">
+        <a href="https://github.com/akthaly" class="text-white fredokaSemiBold botones">Información</a>
       </div>
-      <div class="cardInfo text-center">
-        <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información en Documentación</h1>
-        <!-- <p class="fredoka text-white py-5">Esta aplicación fue desarrollada utilizando tanto Flask, HTML, Python y Tailwind.</p> -->
-        <div class="flex items-center justify-center gap-x-6">
-          <a href="https://drive.google.com/file/d/1hIGaD_Q3a9iHMxHidp8ErzRglDN2udTK/view?usp=sharing" class="text-white fredokaSemiBold botones">Documentación</a>
-        </div>
+    </div>
+    <div class="cardInfo text-center">
+      <h1 class="fredokaBold fontColorBeige sm:text-4xl">Información en Documentación</h1>
+      <!-- <p class="fredoka text-white py-5">Esta aplicación fue desarrollada utilizando tanto Flask, HTML, Python y Tailwind.</p> -->
+      <div class="flex items-center justify-center gap-x-6">
+        <a href="https://drive.google.com/file/d/1hIGaD_Q3a9iHMxHidp8ErzRglDN2udTK/view?usp=sharing"
+          class="text-white fredokaSemiBold botones">Documentación</a>
       </div>
-    </section>
-    <section class="py-15"> 
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Contacto:</h1>
-      <div class="grid grid-cols-3 gap-4 py-10 ">
-        <a href="www.facebook.com/2002.xzh/" class="hover:underline block text-lg font-bold leading-8 fontColorBlack text-center">Facebook</a>
-        <a href="www.instagram.com/eustass.xzh" class="hover:underline block text-lg font-bold leading-8 fontColorBlack text-center">Instagram</a>
-        <a href="https://www.linkedin.com/in/alejandro-anona-xzh/" class="hover:underline block text-lg font-bold fontColorBlack text-center">Linkedin</a>
-      </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
-  
   {% endblock %}
 
 </body>

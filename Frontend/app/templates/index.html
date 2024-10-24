@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <title>Home</title>
 </head>
+
 <body>
     {% extends 'NavBar.html' %}
 
     {% block contenido %}
-    <div class="body flex items-center justify-center">
-        <div class="open flex flex-col items-center justify-center">
-
-            <h2 class="fredokaBold fontColorBeige text-2xl">Cargue el archivo XML de entrada</h2>
-            <form action="/datos" method="POST" enctype="multipart/form-data" class="space-y-4 flex flex-col items-center">
-                <div class="w-full ">
-                    <label class="py-2 block fredoka fontColorBeige" for="file"></label>
-                    <input type="file" id="file" name="file" class="mt-1 block w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 body fredoka ">
-                </div>
-                <button type="submit" class="botones fredoka text-white">
-                    Subir Archivo
-                </button>
-            </form>
+    <section class="flex flex-wrap justify-between h-48">    
+            <div class="open w-[calc(40%-200px)] h-40">
+                <h2 class="fredokaBold fontDarkBlue text-2xl mb-2">Cargue el archivo XML de entrada</h2>
+                <form action="{% url 'visualizarXML' %}" method="POST" enctype="multipart/form-data"
+                    class="flex flex-col items-center">
+                    <div class="w-full">
+                        <input type="file" id="file" name="file" accept="text/xml"
+                            class="block w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 fredoka"
+                            required />
+                    </div>
+                    <button type="submit" class="botones fredoka fontLightBlue">
+                        Cargar Archivo
+                    </button>
+                </form>
+            </div>
+            <div class="w-[calc(35%-100px)]">
+                {% load static %}
+                <img src="{% static 'img/gato1.png' %}" alt="Gato" class="gatoPrincipal" />
         </div>
-    </div>
+            <div class="w-[calc(20%-200px)]">
+                <button type="submit" class="botonReset fredoka fontLightBlue">
+                Reset
+            </button>
+        </div>
+            
+    </section>
+    
+    <section class="grid grid-cols-2 gap-4"> <!-- Espaciado entre columnas -->
+        <!-- Primer textarea -->
+        <textarea class="w-full h-72 rounded-lg p-4" name="xml" id="xml" 
+            placeholder="Aquí se mostrará el XML cargado."></textarea>
+    
+        <!-- Segundo textarea -->
+        <textarea class="w-full h-72 rounded-lg p-4" name="xml_second" id="xml_second"
+            placeholder="Aquí se mostrará la respuesta." readonly></textarea>
+    </section>
+    
+    
 
     {% endblock %}
 </body>

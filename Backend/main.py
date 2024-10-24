@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS
-from Venta import Venta
+from Empresa import Empresa
+from Mensaje import Mensaje
+from Servicio import Servicio
 from xml.dom import minidom
 import re
 from collections import defaultdict
@@ -9,15 +11,11 @@ from collections import defaultdict
 app = Flask(__name__)
 CORS(app)
 
-listadoVentas = []
+lista_mensajes = []
 
 # Lista de los 22 departamentos de Guatemala
-departamentos_validos = [
-    "Guatemala", "Baja Verapaz", "Chimaltenango", "Chiquimula", "El Progreso", 
-    "Escuintla", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa", "Petén", 
-    "Quetzaltenango", "Quiché", "Retalhuleu", "Sacatepéquez", "San Marcos", 
-    "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa", "Alta Verapaz"
-]
+sentimientos_positivos = []
+sentimientos_negativos = []
 
 # Routes
 @app.route('/')

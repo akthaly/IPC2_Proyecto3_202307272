@@ -1,29 +1,43 @@
 body {
-    background-color: #EAD8B1;
-  }
+  background-color: #EBF4F6;
+}
 
-    
 nav {
-  background-color: #EAD8B1;
-   }
+  background-color: #EBF4F6;
+  width: 100vw; /* Ancho completo de la pantalla */
+  height: 60px; /* Altura de la navbar */
+  padding: 10px 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Sombra debajo de la navbar */
+  position: fixed; /* Navbar fija */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
 
-  .tituloNavBar{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
+
+.content {
+  padding: 20px;
+}
+
+.tituloNavBar {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.fontDarkBlue{
+  color: #0B192C;
+}
+
+.fontLightBlue{
+  color: #B9E5E8;
+}
   
-  .fontColorBeige {
-    color: #EAD8B1;
-  }
-  .fontColorBlack {
-    color: #323232;
-  }
-
   .botones {
-    background-color: #603F26;
-    border: 0.5px solid #FFDBB5;
+    background-color: #0B192C;
+    border: 0.5px solid #B9E5E8;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -32,25 +46,23 @@ nav {
     transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
   }
   .botones:hover {
-  background-color: #7D5A43; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #4A628A;
   transform: scale(1.05); /* Aumenta ligeramente el tamaño */
   }
-  
-  .botonBeige {
-    background-color: #EAD8B1; /* Color de fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno, más ancho para mejor apariencia */
-    margin: 10px; /* Margen externo */
-    border: none; /* Sin borde */
-    font-size: 16px; /* Tamaño de fuente */
+
+  .botonReset {
+    background-color: #0B192C;
+    border: 0.5px solid #B9E5E8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 25px; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
     transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
   }
-
-  /* Efecto al pasar el mouse */
-  .botonBeige:hover {
-    background-color: #D5C6B2; /* Cambia el color de fondo al pasar el mouse */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  .botonReset:hover {
+    background-color: #4A628A;
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
   }
 
   .fredokaBold {
@@ -77,28 +89,42 @@ nav {
     font-variation-settings:
       "wdth" 100;
   }
+  .content {
+    padding: 10px; /* Reduce el padding */
+    margin-top: 80px; /* Ajusta el margen superior para no solaparse con la navbar */
+  }
   .open {
-    background-color: #674636;
-    border-radius: 15px;
-    padding: 20px;
+    background-color: #4A628A;
+    border-radius: 10px; /* Bordes redondeados más pequeños */
+    padding: 15px;
     margin: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
   }
+  
   .cardInfo {
-    background-color: #6C4E31;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-color: #4A628A;
+    border-radius: 10px; /* Bordes redondeados más pequeños */
+    padding: 10px; /* Reduce padding */
+    margin: 5px; /* Reduce margen */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Sombra más pequeña */
   }
+  
   .justificado {
     text-align: justify;
-    margin-left: 10%;
-    line-height: 1.6; 
-    margin-right: 10%;
-
-
+    margin-left: 5%; /* Reducir márgenes laterales */
+    margin-right: 5%;
+    line-height: 1.4; /* Reduce el interlineado */
   }
-  
-
-  
+.gatoPrincipal{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 70px;
+  left: 640px;
+}
+.gatoInformacion{
+  background-image: url("../../../static/img/gato2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 190px;
+}
