@@ -34,45 +34,15 @@ nav {
 .fontLightBlue{
   color: #B9E5E8;
 }
-  
-  .botones {
-    background-color: #0B192C;
-    border: 0.5px solid #B9E5E8;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-  }
-  .botones:hover {
-    background-color: #4A628A;
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  }
 
-  .botonReset {
-    background-color: #0B192C;
-    border: 0.5px solid #B9E5E8;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 25px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-  }
-  .botonReset:hover {
-    background-color: #4A628A;
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  }
-
-  .fredokaBold {
-    font-family: "Fredoka", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+.fredokaBold {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
   .fredokaSemiBold {
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
@@ -102,19 +72,22 @@ nav {
   }
   
   .cardInfo {
-    background-color: #4A628A;
+    background: rgba(15,30,90,0.45);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    
     border-radius: 10px; /* Bordes redondeados más pequeños */
     padding: 10px; /* Reduce padding */
     margin: 5px; /* Reduce margen */
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Sombra más pequeña */
   }
   
-  .justificado {
+.justificado {
     text-align: justify;
     margin-left: 5%; /* Reducir márgenes laterales */
     margin-right: 5%;
     line-height: 1.4; /* Reduce el interlineado */
-  }
+}
 .gatoPrincipal{
   width: 250px;
   height: 250px;
@@ -127,4 +100,56 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px 190px;
+}
+
+/* BOTONES */
+
+.botonSubir {
+  background-color: #0B192C;
+  border: 0.5px solid #B9E5E8;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  position: absolute;
+  top: 90px;
+  left: 1250px;
+}
+.botonSubir:hover {
+  background-color: #8093bd;
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  color: #0B192C;
+  font-weight: bold;
+}
+.botones {
+  background-color: #0B192C;
+  border: 0.5px solid #B9E5E8;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+.botones:hover {
+  background-color: #4A628A;
+transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.botonReset {
+  background-color: #f66c09;
+  border: 0.5px solid #f66c09;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+.botonReset:hover {
+  background-color: #f3a873;
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  font-weight: bold;
 }

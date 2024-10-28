@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <title>Home</title>
@@ -21,6 +20,7 @@
                 <form action="{% url 'visualizarXML' %}" method="POST" enctype="multipart/form-data"
                     class="flex flex-col items-center">
                     <div class="w-full">
+                        {% csrf_token %}
                         <input type="file" id="file" name="file" accept="text/xml"
                             class="block w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 fredoka"
                             required />
@@ -34,25 +34,44 @@
                 {% load static %}
                 <img src="{% static 'img/gato1.png' %}" alt="Gato" class="gatoPrincipal" />
         </div>
-            <div class="w-[calc(20%-200px)]">
-                <button type="submit" class="botonReset fredoka fontLightBlue">
-                Reset
-            </button>
+            <div class="w-[calc(20%-180px)]">
+                <form action="{% url 'reset' %}" method="POST" class="flex flex-col items-center">
+                    {% csrf_token %}
+                    <button type="submit" class="botonReset fredoka fontDarkBlue">
+                        Limpiar
+                    </button>
+                </form>
         </div>
             
     </section>
     
     <section class="grid grid-cols-2 gap-4"> <!-- Espaciado entre columnas -->
-        <!-- Primer textarea -->
-        <textarea class="w-full h-72 rounded-lg p-4" name="xml" id="xml" 
-            placeholder="Aquí se mostrará el XML cargado."></textarea>
+        <!-- Contenedor del lado izquierdo -->
+        <div class="flex flex-col space-y-4"> <!-- Usamos espacio entre el textarea y el form -->
+            {% if xml_content %}
+            <textarea class="w-full h-72 rounded-lg p-4 text-justify text-xl fredoka" name="xml" id="xml"
+                placeholder="Aquí se mostrará el XML cargado.">
+                {{ xml_content }}
+            </textarea>
     
-        <!-- Segundo textarea -->
-        <textarea class="w-full h-72 rounded-lg p-4" name="xml_second" id="xml_second"
-            placeholder="Aquí se mostrará la respuesta." readonly></textarea>
+            <!-- Formulario debajo del textarea -->
+            <form enctype="multipart/form-data" action="{% url 'subirXML' %}" method="POST" class="flex flex-col items-center">
+                {% csrf_token %}
+                <input type="hidden" name="xml" value="{{ xml_content|escape }}" />
+                <button type="submit" class="botonSubir fredoka fontLightBlue">
+                    Enviar XML
+                </button>
+            </form>
+            {% else %}
+            <textarea class="w-full h-72 rounded-lg p-4 text-2xl fredokSemiBold" name="xml" id="xml"
+                placeholder="Aquí se mostrará el XML cargado."></textarea>
+            {% endif %}
+        </div>
+    
+        <!-- Contenedor del lado derecho -->
+        <textarea class="w-full h-72 rounded-lg p-4 text-2xl fredokSemiBold" name="xml_second" id="xml_second"
+            placeholder="Aquí se mostrará la respuesta.">{{ response }}</textarea>
     </section>
-    
-    
 
     {% endblock %}
 </body>

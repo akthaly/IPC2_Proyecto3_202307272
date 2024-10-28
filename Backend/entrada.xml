@@ -11,6 +11,7 @@
             <palabra> malo </palabra>
             <palabra> pésimo </palabra>
             <palabra> triste </palabra>
+            <palabra> preocupo </palabra>
             <palabra> molesto </palabra>
             <palabra> decepcionado </palabra>
             <palabra> enojo </palabra>
@@ -26,17 +27,26 @@
                     <servicio nombre="asignación">
                         <alias> asignado </alias>
                     </servicio>
-                    <servicio nombre="graduación"></servicio>
+                    <servicio nombre="graduación">
+                        <alias> gradue </alias>
+                    </servicio>
+                </servicios>
+            </empresa>
+            <empresa>
+                <nombre> Digital </nombre>
+                <servicios>
+                    <servicio nombre="venta">
+                        <alias> venta </alias>
+                        <alias> vendido </alias>
+                    </servicio>
+                    <servicio nombre="soporte">
+                        <alias> asignado </alias>
+                    </servicio>
                 </servicios>
             </empresa>
         </empresas_analizar>
     </diccionario>
     <lista_mensajes>
-        <mensaje>
-        Lugar y fecha: Guatemala, 01/04/2022 15:01 Usuario:
-        map0001@usac.edu Red social: Twitter
-        El servicio en la USAC para inscripción fue muy bueno y me siento muy satisfecho.
-        </mensaje>
         <mensaje>
         Lugar y fecha: Guatemala,
         01/04/2022 15:20 Usuario: map0002@usac.edu Red social: Facebook Hoy me inscribí
@@ -45,11 +55,24 @@
         fui.
         </mensaje>
         <mensaje>
-        Lugar y fecha: Guatemala, 01/04/2022 15:43 Usuario: map0003@usac.edu
-        Red social: WhatsApp
-        Ya estoy inscrito en la USAC, el proceso fue muy bueno, pero al salir,
-        mi carro tenía pinchadas las llantas, esto me preocupó
-        y me fui decepcionado.
+        Lugar y fecha: Guatemala, 01/04/2022 15:20 Usuario: 
+        akthalyxzh@usac.edu Red social: Twitter 
+        El servicio en la USAC para inscripción fue muy bueno y me siento muy satisfecho.
+        </mensaje>
+        <mensaje>
+        Lugar y fecha: Guatemala, 01/04/2022 15:56 Usuario:
+        mar@usac.edu.gt Red social: Instagram 
+        El servicio en la USAC para cuando me inscribí fue muy malo y me siento muy pésimo.
+        </mensaje>
+        <mensaje>
+        Lugar y fecha: Guatemala, 02/04/2022 15:20 Usuario:
+        map0001@usac.edu Red social: Twitter
+        El servicio en la Digital para soporte fue muy bueno y me siento muy satisfecho.
+        </mensaje>
+        <mensaje>
+        Lugar y fecha: Guatemala, 02/04/2022 15:56 Usuario:
+        map0001@usac.edu Red social: Twitter
+        El servicio en la Digital para el soporte fue muy malo y me siento muy pésimo.
         </mensaje>
     </lista_mensajes>
 </solicitud_clasificacion>
